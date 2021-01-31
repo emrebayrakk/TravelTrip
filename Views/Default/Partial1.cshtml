@@ -1,0 +1,23 @@
+﻿@using TravelTrip.Models.sınıflar
+@model List<blog>
+<div class="con-bot">
+    @foreach (var x in Model)
+    {
+        <div class="left">
+            <div class="bot-left">
+                <img src=@x.BlogImage alt="" style="width:400px; height:150px" />
+            </div>
+            <div class="left-text">
+                <h4>@x.Baslik</h4>
+                <span class="doller">@x.Tarih.ToString("yyyy")</span>
+                <p>@x.Aciklama.Substring(0,60)</p>
+                <p><a href="/Blog/blogDetay/@x.ID"><span class="read">Devamını Oku >></span></a></p>
+            </div>
+        </div>
+    }
+    
+  @Html.Action("Partial2", "Default")
+
+  
+    <div class="clear"></div>
+</div>

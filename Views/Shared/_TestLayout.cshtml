@@ -1,0 +1,85 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+   
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="~/css/layoutstyle.css" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="~/css/indexslider.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/responsiveslides.min.js"></script>
+
+    <script>
+    // You can also use "$(window).load(function() {"
+    $(function () {
+      // Slideshow 1
+      $("#slider1").responsiveSlides({
+         auto: true,
+		 nav: true,
+		 speed: 500,
+		 namespace: "callbacks",
+      });
+    });
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="wrap">
+            <div class="logo"><a href="/Default/Index/"><img src="~/images/ben6.png" alt="" style="width:200px; height:80px;" /></a></div>
+            <div class="con-right">
+                <div class="grid1-l-img">
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+                    <!-- Add font awesome icons -->
+                    <a href="https://www.instagram.com/emrequi/" class="fa fa-instagram" style="color:floralwhite"></a>
+                    <a href="https://twitter.com/emreaspx" class="fa fa-twitter" style="color:floralwhite"> </a>
+                </div>
+                
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="header-bottom">
+        <div class="wrap">
+            <ul id="nav">
+                <li><a href="/Default/Index/">Ana Sayfa</a></li>
+                <li><a class="hsubs" href="/About/Index/">Hakkımızda</a></li>
+                <li>
+                    <a class="hsubs" href="/Kitaplar/Index/">Öneriler</a>
+                    <ul class="subs">
+                        <li><a href="/Kitaplar/Index/">Kitaplar</a></li>
+                        <li><a href="/Kitaplar/filmDiziler/">Filmler ve Diziler  </a></li>
+                        <li><a href="/Kitaplar/müzikler/">Müzikler</a></li>
+                    </ul>
+                </li>
+                <li><a class="hsubs" href="/Blog/Index">Yazılarım</a></li>
+                <li><a href="~/Contact/yeniMail">İletişim</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class"content">
+        @RenderBody()
+    </div>
+    <div class="footer-bottom">
+        <div class="wrap">
+            <div class="copy">
+                <p>&copy; 2020. Tüm Hakları Saklıdır |</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,79 @@
+﻿@model  TravelTrip.Models.sınıflar.kitapyorum
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+
+    <link href="~/css/web2bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="~/css/web2style.css" rel='stylesheet' type='text/css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Personal Blog Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!----webfonts---->
+    <link href='http://fonts.googleapis.com/css?family=Oswald:100,400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic' rel='stylesheet' type='text/css'>
+    <!----//webfonts---->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!--end slider -->
+
+
+</head>
+<body>
+    <!---header---->
+    <div class="header">
+        <div class="container">
+
+
+            <div class="clearfix"></div>
+
+        </div>
+    </div>
+    <!--/header-->
+    <div class="single">
+        <div class="container">
+            <div class="col-md-8 single-main">
+                @foreach (var kitaplar in Model.deger1)
+                {
+                    <div class="single-grid">
+                        <img src="@kitaplar.kitapImage" alt="" style="margin-bottom: 15px; height:400px" />
+                        <h3>@kitaplar.kitapBaslik</h3>
+                        <br />
+                        <p>
+                            @kitaplar.kitapAciklama.Substring(0,20)...
+
+                        </p>
+                        <p><a href="/Kitaplar/kitapDetay/@kitaplar.ID"><span class="read">Okumaya Devam Et >></span></a></p>
+                    </div>
+                    <br />
+                }
+
+
+            </div>
+
+            <div class="col-md-4 side-content">
+                <div class="recent">
+                    <h3>Son Eklenen Kitaplar</h3>
+                    @foreach (var kitap in Model.deger3)
+                    {
+                        <ul>
+                            <li><a href="/Kitaplar/kitapDetay/@kitap.ID">@kitap.kitapBaslik</a></li>
+
+                        </ul>
+                    }
+                </div>
+
+
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</body>
+</html>
+
