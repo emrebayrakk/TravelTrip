@@ -1,6 +1,6 @@
 # Asp.Net-MVC
 
-Dynamic Blog Site,CodeFirst ,Entity Framework, MVC, Template W3
+Dynamic Blog Site, MVC, CodeFirst ,Entity Framework
 
 
 
